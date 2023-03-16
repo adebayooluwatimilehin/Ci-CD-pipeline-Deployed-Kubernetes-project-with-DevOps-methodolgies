@@ -22,7 +22,7 @@ pipeline {
                 script {
                     dir('Deployment') {
                         sh "aws eks update-kubeconfig --name Kubernetes_prod"
-                        sh "kubectk apply -f weave-daemonset-k8s.yaml"
+                        sh "kubectl apply -f weave-daemonset-k8s.yaml"
                         sh "kubectl apply -f sock-shop.yml"
                     }
                 }
