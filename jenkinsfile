@@ -23,7 +23,6 @@ pipeline {
                     dir('Deployment') {
                         sh "aws eks update-kubeconfig --name Kubernetes_prod"
                         sh "kubectl apply -f sock-shop.yml"
-                        sh "kubectl apply -f sock-shop-service.yml"
                     }
                 }
             }
