@@ -317,7 +317,6 @@ spec:
     #nodePort: 30001
   selector:
     name: front-end
-    sessionAffinity: None
 ---
 apiVersion: apps/v1
 kind: Deployment
