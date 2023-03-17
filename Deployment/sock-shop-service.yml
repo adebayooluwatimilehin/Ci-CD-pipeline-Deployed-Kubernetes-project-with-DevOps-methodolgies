@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: services
+metadata:
+  name: socks-shop
+spec:
+  type: loadbalancer
+  ports: 
+    - name: http
+      port: 80
+      targetport: 8080
+  selector: 
+    app: sock-shop
