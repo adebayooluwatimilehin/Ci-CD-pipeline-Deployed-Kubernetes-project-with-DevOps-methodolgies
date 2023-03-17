@@ -12,7 +12,7 @@ module "my_vpc" {
   single_nat_gateway   = true
   enable_dns_hostnames = true
 
-  tags = {
+  tags = { 
     "kubernetes.io/cluster/Kubernetes_prod" = "shared"
   }
 
