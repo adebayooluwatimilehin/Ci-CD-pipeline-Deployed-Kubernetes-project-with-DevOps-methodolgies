@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: services
+kind: service
 metadata:
   name: socks-shop
 spec:
