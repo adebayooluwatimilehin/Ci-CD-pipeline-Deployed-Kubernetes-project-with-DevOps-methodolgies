@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: music-store
+  name: petstore
 spec: 
   selector:
     matchLabels:
-      app: music-store
+      app: petstore
   replicas: 1
   template:
     metadata:
       labels:
-        app: music-store
+        app: petstore
     spec:
       containers:
-        - name: music-store
-          image: dockersamples/examplevotingapp_musicstore
+        - name: petstore
+          image: ashishkushwaha/petstore:latest
           env:
             - name: DATABASE_URL
               value: postgresql://Timi:my_fake_password@postgres-service:5432/Timi_db
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: music-store-service
+  name: pet_store_service
 spec:
   type: LoadBalancer
   selector:
-     app: music-store
+     app: petstore
   ports:
     - name: http
       port: 80
