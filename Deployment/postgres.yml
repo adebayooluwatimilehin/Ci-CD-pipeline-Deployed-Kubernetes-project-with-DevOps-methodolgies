@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres
+          image: postgres:latest
           env:
             - name: POSTGRES_USER
               value: Timi 
@@ -33,7 +33,7 @@ spec:
   selector: 
     app: postgres
   ports: 
-    - name: postgres:latest
+    - name: postgres
       port: 5432
       targetPort: 5432
         
