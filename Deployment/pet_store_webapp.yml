@@ -5,15 +5,15 @@ metadata:
 spec: 
   selector:
     matchLabels:
-      app: petstore
+      app: petstoreapp
   replicas: 1
   template:
     metadata:
       labels:
-        app: petstore
+        app: petstoreapp
     spec:
       containers:
-        - name: petstore
+        - name: petstoreapp
           image: nswamy9/petstoreapp
           env:
             - name: DATABASE_URL
@@ -28,7 +28,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-     app: petstore
+     app: petstoreapp
   ports:
     - name: http
       port: 80
