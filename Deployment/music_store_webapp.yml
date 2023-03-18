@@ -17,7 +17,7 @@ spec:
           image: dockersamples/examplevotingapp_musicstore
           env:
             - name: DATABASE_URL
-              Value: postgresql://Timi:my_fake_password@postgres-service:5432/Timi_db
+              value: postgresql://Timi:my_fake_password@postgres-service:5432/Timi_db
           ports: 
             - containerPort: 8080
 ---
