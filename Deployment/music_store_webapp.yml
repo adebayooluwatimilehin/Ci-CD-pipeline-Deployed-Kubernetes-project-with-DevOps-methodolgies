@@ -1,0 +1,35 @@
+apiVersion: apps/V1
+kind: Deployment
+metadata:
+  name: music-store
+spec: 
+  selector:
+    matchLabels:
+      app: music-store
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: music-store
+    spec:
+      containers:
+        - name: music-store
+          image: dockersamples/examplevotingapp_musicstore
+          env:
+            - name: DATABASE_URL
+              Value: postgresql://Timi:my_fake_password@postgres-service:5432/Timi_db
+          ports: 
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: music-store-service
+spec:
+  type: LoadBalancer
+  selector:
+     app: music-store
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
