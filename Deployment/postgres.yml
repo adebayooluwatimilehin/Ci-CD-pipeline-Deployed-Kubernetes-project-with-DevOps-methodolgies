@@ -33,7 +33,7 @@ spec:
   selector: 
     app: postgres
   ports: 
-    - name: postgres-port
+    - name: postgres
       port: 5432
       targetport: 5432
         
