@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: petstore
-          image: ashishkushwaha/petstore:latest
+          image: nswamy9/petstoreapp
           env:
             - name: DATABASE_URL
               value: postgresql://Timi:my_fake_password@postgres-service:5432/Timi_db
