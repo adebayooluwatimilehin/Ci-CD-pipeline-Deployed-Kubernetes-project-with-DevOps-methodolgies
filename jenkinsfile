@@ -27,6 +27,7 @@ pipeline {
                         sh "kubectl apply -f nginx.yml"
                         sh "kubectl apply -f nginx-configmap.yml"
                         sh "kubectl apply -f pet_store_webapp.yml"
+                        sh "kubectl apply -f monitoring.yml"
                     }
                 }
             }
