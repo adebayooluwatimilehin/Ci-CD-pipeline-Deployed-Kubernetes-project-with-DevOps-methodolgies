@@ -8,6 +8,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prometheus-configmap
+  namespace: prometheus
 data:
   prometheus.yml: |-
     global:
