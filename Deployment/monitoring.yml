@@ -90,7 +90,7 @@ metadata:
   labels:
     app: prometheus
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: prometheus
   ports:
@@ -140,7 +140,7 @@ metadata:
   labels:
     app: grafana
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: grafana
   ports:
