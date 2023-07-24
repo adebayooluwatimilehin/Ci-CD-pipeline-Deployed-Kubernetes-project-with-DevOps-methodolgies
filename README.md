@@ -1,1 +1,1 @@
-# Ci-CD-pipeline-Deployed-Kubernetes-project-with-DevOps-methodolgies
+# Complete Ci-CD-pipeline-Deployed-Socks-Shop application
